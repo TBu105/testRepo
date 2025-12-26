@@ -1,0 +1,120 @@
+/* ===== Reset nhẹ ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+/* ===== Layout chung ===== */
+.container {
+    width: 95%;
+    margin: 20px auto;
+}
+
+/* ===== Navigation ===== */
+.navbar {
+    background-color: #2c3e50;
+    padding: 12px 20px;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Heading ===== */
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* ===== Form ===== */
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px;
+}
+
+/* ===== Table ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+table th {
+    background-color: #34495e;
+    color: #ffffff;
+    padding: 8px;
+    text-align: left;
+}
+
+table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ===== Button / Link ===== */
+.action-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.action-link:hover {
+    background-color: #2980b9;
+}
+
+/* ===== Footer ===== */
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0;
+}
+
+/* ===== ERROR BOX ===== */
+.error-box {
+    border: 1px solid #e74c3c;
+    background-color: #fdecea;
+    color: #c0392b;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.error-box ul {
+    margin: 8px 0 0 20px;
+    padding: 0;
+}
+
+.error-box li {
+    display: block;        /* QUAN TRỌNG */
+    margin-bottom: 6px;    /* mỗi lỗi 1 dòng */
+    line-height: 1.4;
+}
+
+/* ===== FIELD ERROR ===== */
+.field-error {
+    color: #c0392b;
+    font-size: 12px;
+    margin-top: 4px;
+}
