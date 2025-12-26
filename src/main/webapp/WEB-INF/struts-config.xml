@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" 
+"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <form-beans>
+        <form-bean name="employeeForm" type="com.mycompany.employee.form.EmployeeForm"/>
+    </form-beans>
+    
+    <global-exceptions>
+        <exception
+            key="error.duplicate.email"
+            type="com.mycompany.employee.exception.DuplicateEmailException"
+            path="/pages/error.jsp"
+            scope="request"/>
+    </global-exceptions>
+
+    
+    
+    <action-mappings>
+        <action path="/employee"
+                type="com.mycompany.employee.action.EmployeeAction"
+                name="employeeForm"
+                scope="request"
+                parameter="method" 
+                validate="false"
+                input="/pages/list-employee.jsp">
+            <forward name="employeeList" path="/pages/list-employee.jsp" />
+            <forward name="createEmployee" path="/pages/employee-form.jsp" />
+        </action>
+        
+        <action path="/employeeCreate"
+            type="com.mycompany.employee.action.EmployeeAction"
+            name="employeeForm"
+            scope="request"
+            parameter="method"
+            validate="true"
+            input="/employee.do?method=prepareAddEmployee"/>
+    </action-mappings>
+    
+    <message-resources parameter="Application" />
+
+</struts-config>
